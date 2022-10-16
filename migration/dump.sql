@@ -7,3 +7,12 @@ CREATE TABLE `info_connexion` (
                                   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `info_post` (
+                             `id` int NOT NULL AUTO_INCREMENT,
+                             `pseudo` varchar(16) NOT NULL,
+                             `sujet` text NOT NULL,
+                             `message` text NOT NULL,
+                             `date_post` datetime NOT NULL,
+                             PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+

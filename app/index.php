@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+<!--Démarre une session pour que les pages soit connéctées entre elles -->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,6 +9,7 @@ session_start();
 	<title>Blog World</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    Tout les liens pour avoir un front potable-->
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <!--===============================================================================================-->
@@ -36,12 +38,14 @@ session_start();
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
+<!--                Titre -->
 				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
 					<span class="login100-form-title-1">
 						Inscription & Connexion
 					</span>
 				</div>
 
+<!--                Input de l'email -->
 				<form class="login100-form validate-form" method="post" action="login.php">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="email @ nécessaire">
 						<span class="label-input100">Email</span>
@@ -49,25 +53,21 @@ session_start();
 						<span class="focus-input100"></span>
 					</div>
 
+<!--                    Input du mot de passe -->
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "mot de passe requis">
 						<span class="label-input100">MDP</span>
 						<input class="input100" type="password" name="pass" placeholder="mot de passe">
 						<span class="focus-input100"></span>
 					</div>
 
+<!--                    Input du pseudo -->
                     <div class="wrap-input100 validate-input m-b-18" data-validate = "Ton surnom ?">
                         <span class="label-input100">Pseudo</span>
                         <input class="input100" type="text" name="pseudo" placeholder="pseudo">
                         <span class="focus-input100"></span>
                     </div>
 
-<!--                    <div class="wrap-input100 validate-input m-b-18" data-validate = "Montre ta petite bouille">-->
-<!--                        <span class="label-input100">Photo de Profil</span>-->
-<!--                        <input class="input100" type="file" name="photo_profil">-->
-<!--                        <span class="focus-input100"></span>-->
-<!--                        <img id="photo" src="photo_profil" alt="">-->
-<!--                    </div>-->
-
+<!--                    Case à cocher : ne sert à rien -->
 					<div class="flex-sb-m w-full p-b-30">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -76,17 +76,18 @@ session_start();
 							</label>
 						</div>
 
+<!--                        Ne sert à rien non plus à part pour la blague -->
 						<div>
 							<a href="#" id="clique" onclick="change" class="txt1">
 								tu peux cliquer
 							</a>
                             <button onclick="change()">ICI</button>
 						</div>
-
 					</div>
 
+<!--                    Boutton d'envoi des informations -->
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="submit">
+						<button class="login100-form-btn" name="submit1">
 							Envoyer
 						</button>
 					</div>
@@ -95,6 +96,7 @@ session_start();
 		</div>
 	</div>
 
+<!--    Tout les scripts pour avoir un front potable -->
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -112,6 +114,7 @@ session_start();
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
+<!--    Blague pour le bouton cliquable -->
     <script>
         function change() {
             document.getElementById("clique").innerHTML = "mais ça ne sert à rien";
